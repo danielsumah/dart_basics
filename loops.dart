@@ -1,4 +1,4 @@
-//  five type of loops in darts
+// type of loops in darts
 
 main() {
   // 1. Standard for loop
