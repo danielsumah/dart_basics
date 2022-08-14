@@ -43,6 +43,8 @@ class Car extends Vehicle {
   double? price;
 
   Car(String model, int year, this.price) : super(model, year);
+
+  @override
   void showOutput() {
     super.showOutput();
     print(year);
