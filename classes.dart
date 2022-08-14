@@ -25,10 +25,37 @@ class Person {
   }
 }
 
-void main() {
-  Person p1 = Person('Daniel', 21);
-  p1.showOutput();
+class Vehicle {
+  String? model;
+  int? year;
 
-  Person newGuest = Person.guest();
-  newGuest.showOutput();
+  Vehicle(this.model, this.year) {
+    print(this.model);
+    print(this.year);
+  }
+  void showOutput() {
+    print(model);
+    print(year);
+  }
+}
+
+class Car extends Vehicle {
+  double? price;
+
+  Car(String model, int year, this.price) : super(model, year);
+  void showOutput() {
+    super.showOutput();
+    print(year);
+  }
+}
+
+void main() {
+  // Person p1 = Person('Daniel', 21);
+  // p1.showOutput();
+
+  // Person newGuest = Person.guest();
+  // newGuest.showOutput();
+
+  Car car1 = Car("Toyota", 2002, 24000);
+  print(car1);
 }
